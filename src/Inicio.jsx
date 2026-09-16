@@ -8,7 +8,7 @@ function Inicio() {
   const [procesando, setProcesando] = useState(false)
   const [mostrarFecha, setMostrarFecha] = useState(false)
 
-  const aventuraActiva = true
+  const aventuraActiva = false
 
   const comenzarAventura = () => {
     if (!aventuraActiva || procesando) return
