@@ -1,0 +1,446 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+.pista-page {
+  min-height: 100vh;
+  padding: 50px 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 50% 15%,
+      rgba(255, 221, 130, 0.18),
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at 10% 80%,
+      rgba(164, 109, 220, 0.25),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 90% 70%,
+      rgba(124, 74, 177, 0.25),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      #24113f,
+      #432064,
+      #24123f
+    );
+}
+
+
+
+.pista-stars span {
+  position: absolute;
+
+  color: #f6d57b;
+
+  font-size: 20px;
+
+  opacity: 0.6;
+
+  animation: pistaTwinkle 3s infinite ease-in-out;
+}
+
+.pista-stars span:nth-child(1) {
+  top: 8%;
+  left: 10%;
+}
+
+.pista-stars span:nth-child(2) {
+  top: 18%;
+  right: 15%;
+  font-size: 28px;
+}
+
+.pista-stars span:nth-child(3) {
+  top: 50%;
+  left: 5%;
+  font-size: 26px;
+}
+
+.pista-stars span:nth-child(4) {
+  bottom: 15%;
+  right: 10%;
+}
+
+.pista-stars span:nth-child(5) {
+  bottom: 20%;
+  left: 18%;
+}
+
+.pista-stars span:nth-child(6) {
+  top: 35%;
+  right: 5%;
+}
+
+.pista-stars span:nth-child(7) {
+  bottom: 8%;
+  right: 35%;
+}
+
+@keyframes pistaTwinkle {
+  0%,
+  100% {
+    opacity: 0.25;
+    transform: scale(0.8);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+
+.pista-card {
+  width: min(700px, 100%);
+
+  padding: 50px 55px;
+
+  text-align: center;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  border: 1px solid rgba(244, 206, 112, 0.35);
+
+  border-radius: 30px;
+
+  backdrop-filter: blur(18px);
+
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.45),
+    inset 0 0 40px rgba(255, 220, 150, 0.04);
+
+  position: relative;
+  z-index: 2;
+}
+
+
+.pista-sun {
+  color: #f4ce70;
+
+  font-size: 42px;
+
+  margin-bottom: 5px;
+
+  text-shadow:
+    0 0 10px rgba(255, 215, 120, 0.8),
+    0 0 25px rgba(255, 215, 120, 0.4);
+}
+
+
+
+.pista-card h1 {
+  font-family: 'Cormorant Garamond', serif;
+
+  font-size: 48px;
+
+  font-weight: 600;
+
+  color: #fff8e7;
+
+  margin-bottom: 10px;
+}
+
+
+
+.gold-line {
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 15px;
+
+  color: #f4ce70;
+
+  margin-bottom: 30px;
+}
+
+.gold-line::before,
+.gold-line::after {
+  content: '';
+
+  width: 100px;
+
+  height: 1px;
+
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(244, 206, 112, 0.7)
+  );
+}
+
+.gold-line::after {
+  background: linear-gradient(
+    to left,
+    transparent,
+    rgba(244, 206, 112, 0.7)
+  );
+}
+
+
+.pista-photo {
+  width: 100%;
+
+  max-width: 300px;
+
+  margin: 0 auto 30px;
+
+  border-radius: 18px;
+
+  overflow: hidden;
+
+  border: 3px solid rgba(244, 206, 112, 0.8);
+
+  box-shadow:
+    0 15px 40px rgba(0, 0, 0, 0.4),
+    0 0 25px rgba(244, 206, 112, 0.15);
+}
+
+.pista-photo img {
+  width: 100%;
+
+  display: block;
+
+  max-height: 500px;
+
+  object-fit: cover;
+}
+
+
+/* TEXTO */
+
+.pista-text {
+  max-width: 580px;
+
+  margin: 0 auto;
+}
+
+.pista-text p {
+  font-family: 'Cormorant Garamond', serif;
+
+  color: #fff8e7;
+
+  font-size: 23px;
+
+  line-height: 1.45;
+}
+
+.carriage-message {
+  color: #f4ce70 !important;
+
+  font-size: 20px !important;
+
+  margin-top: 18px;
+}
+
+
+/* DIRECCIÓN */
+
+.address {
+  margin: 30px auto;
+
+  padding: 18px 25px;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 18px;
+
+  max-width: 450px;
+
+  border-radius: 15px;
+
+  background: rgba(244, 206, 112, 0.08);
+
+  border: 1px solid rgba(244, 206, 112, 0.35);
+}
+
+.address span {
+  color: #f4ce70;
+
+  font-size: 20px;
+}
+
+.address p {
+  color: #f4ce70;
+
+  font-family: 'Cormorant Garamond', serif;
+
+  font-size: 27px;
+
+  font-weight: 600;
+}
+
+
+/* SIGUIENTE CÓDIGO */
+
+.next-access {
+  margin-top: 35px;
+
+  padding-top: 30px;
+
+  border-top: 1px solid rgba(244, 206, 112, 0.25);
+}
+
+.next-access h2 {
+  font-family: 'Cormorant Garamond', serif;
+
+  color: #fff8e7;
+
+  font-size: 30px;
+
+  font-weight: 500;
+}
+
+.next-access p {
+  margin-top: 5px;
+
+  color: rgba(255, 255, 255, 0.65);
+
+  font-size: 13px;
+}
+
+
+/* INPUT */
+
+.pista-input {
+  max-width: 380px;
+
+  margin: 20px auto 15px;
+}
+
+.pista-input input {
+  width: 100%;
+
+  padding: 15px 20px;
+
+  border-radius: 50px;
+
+  border: 1px solid rgba(244, 206, 112, 0.5);
+
+  outline: none;
+
+  background: rgba(255, 255, 255, 0.1);
+
+  color: white;
+
+  text-align: center;
+
+  font-family: 'Montserrat', sans-serif;
+
+  font-size: 14px;
+}
+
+.pista-input input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.pista-input input:focus {
+  border-color: #f4ce70;
+
+  box-shadow:
+    0 0 20px rgba(244, 206, 112, 0.2);
+}
+
+
+/* BOTÓN */
+
+.pista-button {
+  padding: 14px 35px;
+
+  border: none;
+
+  border-radius: 50px;
+
+  cursor: pointer;
+
+  background: linear-gradient(
+    135deg,
+    #f8d77c,
+    #dcae45
+  );
+
+  color: #32154e;
+
+  font-family: 'Montserrat', sans-serif;
+
+  font-weight: 500;
+
+  letter-spacing: 1px;
+
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.25);
+
+  transition: all 0.3s ease;
+}
+
+.pista-button:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.3),
+    0 0 30px rgba(244, 206, 112, 0.4);
+}
+
+
+/* MENSAJE */
+
+.love-message {
+  margin-top: 35px;
+
+  color: rgba(255, 248, 231, 0.55);
+
+  font-family: 'Cormorant Garamond', serif;
+
+  font-size: 19px;
+}
+
+
+/* MÓVIL */
+
+@media (max-width: 600px) {
+
+  .pista-page {
+    padding: 20px 12px;
+  }
+
+  .pista-card {
+    padding: 35px 20px;
+  }
+
+  .pista-card h1 {
+    font-size: 40px;
+  }
+
+  .pista-text p {
+    font-size: 20px;
+  }
+
+  .address p {
+    font-size: 22px;
+  }
+
+  .gold-line::before,
+  .gold-line::after {
+    width: 60px;
+  }
+}

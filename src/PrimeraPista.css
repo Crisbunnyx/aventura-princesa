@@ -1,0 +1,1332 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+.pista-page {
+  min-height: 100vh;
+  padding: 50px 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 50% 15%,
+      rgba(255, 221, 130, 0.18),
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at 10% 80%,
+      rgba(164, 109, 220, 0.25),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 90% 70%,
+      rgba(124, 74, 177, 0.25),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      #24113f,
+      #432064,
+      #24123f
+    );
+}
+
+
+
+.pista-stars span {
+  position: absolute;
+
+  color: #f6d57b;
+
+  font-size: 20px;
+
+  opacity: 0.6;
+
+  animation: pistaTwinkle 3s infinite ease-in-out;
+}
+
+.pista-stars span:nth-child(1) {
+  top: 8%;
+  left: 10%;
+}
+
+.pista-stars span:nth-child(2) {
+  top: 18%;
+  right: 15%;
+  font-size: 28px;
+}
+
+.pista-stars span:nth-child(3) {
+  top: 50%;
+  left: 5%;
+  font-size: 26px;
+}
+
+.pista-stars span:nth-child(4) {
+  bottom: 15%;
+  right: 10%;
+}
+
+.pista-stars span:nth-child(5) {
+  bottom: 20%;
+  left: 18%;
+}
+
+.pista-stars span:nth-child(6) {
+  top: 35%;
+  right: 5%;
+}
+
+.pista-stars span:nth-child(7) {
+  bottom: 8%;
+  right: 35%;
+}
+
+@keyframes pistaTwinkle {
+  0%,
+  100% {
+    opacity: 0.25;
+    transform: scale(0.8);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+
+.pista-card {
+  width: min(700px, 100%);
+
+  padding: 50px 55px;
+
+  text-align: center;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  border: 1px solid rgba(244, 206, 112, 0.35);
+
+  border-radius: 30px;
+
+  backdrop-filter: blur(18px);
+
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.45),
+    inset 0 0 40px rgba(255, 220, 150, 0.04);
+
+  position: relative;
+  z-index: 2;
+}
+
+
+.pista-sun {
+  color: #f4ce70;
+
+  font-size: 42px;
+
+  margin-bottom: 5px;
+
+  text-shadow:
+    0 0 10px rgba(255, 215, 120, 0.8),
+    0 0 25px rgba(255, 215, 120, 0.4);
+}
+
+
+
+.pista-card h1 {
+  font-family: 'Cormorant Garamond', serif;
+
+  font-size: 48px;
+
+  font-weight: 600;
+
+  color: #fff8e7;
+
+  margin-bottom: 10px;
+}
+
+
+
+.gold-line {
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 15px;
+
+  color: #f4ce70;
+
+  margin-bottom: 30px;
+}
+
+.gold-line::before,
+.gold-line::after {
+  content: '';
+
+  width: 100px;
+
+  height: 1px;
+
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(244, 206, 112, 0.7)
+  );
+}
+
+.gold-line::after {
+  background: linear-gradient(
+    to left,
+    transparent,
+    rgba(244, 206, 112, 0.7)
+  );
+}
+
+
+.pista-photo {
+  width: 100%;
+
+  max-width: 300px;
+
+  margin: 0 auto 30px;
+
+  border-radius: 18px;
+
+  overflow: hidden;
+
+  border: 3px solid rgba(244, 206, 112, 0.8);
+
+  box-shadow:
+    0 15px 40px rgba(0, 0, 0, 0.4),
+    0 0 25px rgba(244, 206, 112, 0.15);
+}
+
+.pista-photo img {
+  width: 100%;
+
+  display: block;
+
+  max-height: 500px;
+
+  object-fit: cover;
+}
+
+
+/* TEXTO */
+
+.pista-text {
+  max-width: 580px;
+
+  margin: 0 auto;
+}
+
+.pista-text p {
+  font-family: 'Cormorant Garamond', serif;
+
+  color: #fff8e7;
+
+  font-size: 23px;
+
+  line-height: 1.45;
+}
+
+.carriage-message {
+  color: #f4ce70 !important;
+
+  font-size: 20px !important;
+
+  margin-top: 18px;
+}
+
+
+/* DIRECCIÓN */
+
+.address {
+  margin: 30px auto;
+
+  padding: 18px 25px;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 18px;
+
+  max-width: 450px;
+
+  border-radius: 15px;
+
+  background: rgba(244, 206, 112, 0.08);
+
+  border: 1px solid rgba(244, 206, 112, 0.35);
+}
+
+.address span {
+  color: #f4ce70;
+
+  font-size: 20px;
+}
+
+.address p {
+  color: #f4ce70;
+
+  font-family: 'Cormorant Garamond', serif;
+
+  font-size: 27px;
+
+  font-weight: 600;
+}
+
+
+/* SIGUIENTE CÓDIGO */
+
+.next-access {
+  margin-top: 35px;
+
+  padding-top: 30px;
+
+  border-top: 1px solid rgba(244, 206, 112, 0.25);
+}
+
+.next-access h2 {
+  font-family: 'Cormorant Garamond', serif;
+
+  color: #fff8e7;
+
+  font-size: 30px;
+
+  font-weight: 500;
+}
+
+.next-access p {
+  margin-top: 5px;
+
+  color: rgba(255, 255, 255, 0.65);
+
+  font-size: 13px;
+}
+
+
+/* INPUT */
+
+.pista-input {
+  max-width: 380px;
+
+  margin: 20px auto 15px;
+}
+
+.pista-input input {
+  width: 100%;
+
+  padding: 15px 20px;
+
+  border-radius: 50px;
+
+  border: 1px solid rgba(244, 206, 112, 0.5);
+
+  outline: none;
+
+  background: rgba(255, 255, 255, 0.1);
+
+  color: white;
+
+  text-align: center;
+
+  font-family: 'Montserrat', sans-serif;
+
+  font-size: 14px;
+}
+
+.pista-input input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.pista-input input:focus {
+  border-color: #f4ce70;
+
+  box-shadow:
+    0 0 20px rgba(244, 206, 112, 0.2);
+}
+
+
+/* BOTÓN */
+
+.pista-button {
+  padding: 14px 35px;
+
+  border: none;
+
+  border-radius: 50px;
+
+  cursor: pointer;
+
+  background: linear-gradient(
+    135deg,
+    #f8d77c,
+    #dcae45
+  );
+
+  color: #32154e;
+
+  font-family: 'Montserrat', sans-serif;
+
+  font-weight: 500;
+
+  letter-spacing: 1px;
+
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.25);
+
+  transition: all 0.3s ease;
+}
+
+.pista-button:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.3),
+    0 0 30px rgba(244, 206, 112, 0.4);
+}
+
+
+/* MENSAJE */
+
+.love-message {
+  margin-top: 35px;
+
+  color: rgba(255, 248, 231, 0.55);
+
+  font-family: 'Cormorant Garamond', serif;
+
+  font-size: 19px;
+}
+
+
+/* MÓVIL */
+
+@media (max-width: 600px) {
+
+  .pista-page {
+    padding: 20px 12px;
+  }
+
+  .pista-card {
+    padding: 35px 20px;
+  }
+
+  .pista-card h1 {
+    font-size: 40px;
+  }
+
+  .pista-text p {
+    font-size: 20px;
+  }
+
+  .address p {
+    font-size: 22px;
+  }
+
+  .gold-line::before,
+  .gold-line::after {
+    width: 60px;
+  }
+}
+
+
+/* =====================================================
+   =====================================================
+   PANTALLA DE PROCESAMIENTO
+   =====================================================
+   ===================================================== */
+
+.processing-page {
+
+  min-height: 100vh;
+
+  width: 100%;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  position: relative;
+
+  overflow: hidden;
+
+  background:
+
+    radial-gradient(
+      circle at 50% 35%,
+      rgba(255, 218, 120, 0.22),
+      transparent 22%
+    ),
+
+    radial-gradient(
+      circle at 20% 80%,
+      rgba(159, 91, 219, 0.28),
+      transparent 35%
+    ),
+
+    radial-gradient(
+      circle at 80% 70%,
+      rgba(113, 63, 164, 0.30),
+      transparent 35%
+    ),
+
+    linear-gradient(
+      135deg,
+      #1d0c36,
+      #432064,
+      #211039
+    );
+
+}
+
+
+/* ==========================================
+   ESTRELLAS DE CARGA
+========================================== */
+
+.loading-stars span {
+
+  position: absolute;
+
+  color: #f9dc87;
+
+  font-size: 22px;
+
+  animation: loadingTwinkle 2.5s infinite ease-in-out;
+
+}
+
+
+.loading-stars span:nth-child(1) {
+  top: 8%;
+  left: 12%;
+}
+
+.loading-stars span:nth-child(2) {
+  top: 15%;
+  left: 35%;
+  font-size: 28px;
+}
+
+.loading-stars span:nth-child(3) {
+  top: 25%;
+  right: 15%;
+}
+
+.loading-stars span:nth-child(4) {
+  top: 45%;
+  left: 8%;
+  font-size: 30px;
+}
+
+.loading-stars span:nth-child(5) {
+  top: 55%;
+  right: 7%;
+}
+
+.loading-stars span:nth-child(6) {
+  bottom: 20%;
+  left: 15%;
+  font-size: 27px;
+}
+
+.loading-stars span:nth-child(7) {
+  bottom: 12%;
+  right: 20%;
+}
+
+.loading-stars span:nth-child(8) {
+  top: 70%;
+  left: 40%;
+}
+
+.loading-stars span:nth-child(9) {
+  top: 12%;
+  right: 40%;
+}
+
+.loading-stars span:nth-child(10) {
+  bottom: 8%;
+  left: 50%;
+}
+
+
+@keyframes loadingTwinkle {
+
+  0%,
+  100% {
+
+    opacity: 0.2;
+
+    transform: scale(0.7) rotate(0deg);
+
+  }
+
+  50% {
+
+    opacity: 1;
+
+    transform: scale(1.25) rotate(15deg);
+
+  }
+
+}
+
+
+/* ==========================================
+   LINTERNA
+========================================== */
+
+.lanterns span {
+
+  position: absolute;
+
+  bottom: -80px;
+
+  font-size: 35px;
+
+  opacity: 0;
+
+  filter:
+    drop-shadow(
+      0 0 15px rgba(255, 180, 70, 0.8)
+    );
+
+  animation: lanternRise 5s linear infinite;
+
+}
+
+
+.lanterns span:nth-child(1) {
+
+  left: 10%;
+
+  animation-delay: 0s;
+
+}
+
+
+.lanterns span:nth-child(2) {
+
+  left: 25%;
+
+  animation-delay: 1.2s;
+
+}
+
+
+.lanterns span:nth-child(3) {
+
+  left: 40%;
+
+  animation-delay: 2.2s;
+
+}
+
+
+.lanterns span:nth-child(4) {
+
+  left: 60%;
+
+  animation-delay: 0.8s;
+
+}
+
+
+.lanterns span:nth-child(5) {
+
+  left: 75%;
+
+  animation-delay: 1.8s;
+
+}
+
+
+.lanterns span:nth-child(6) {
+
+  left: 88%;
+
+  animation-delay: 2.8s;
+
+}
+
+
+@keyframes lanternRise {
+
+  0% {
+
+    transform:
+      translateY(0)
+      translateX(0)
+      rotate(-5deg);
+
+    opacity: 0;
+
+  }
+
+  15% {
+
+    opacity: 0.8;
+
+  }
+
+  50% {
+
+    transform:
+      translateY(-50vh)
+      translateX(20px)
+      rotate(5deg);
+
+    opacity: 0.9;
+
+  }
+
+  100% {
+
+    transform:
+      translateY(-115vh)
+      translateX(-20px)
+      rotate(-5deg);
+
+    opacity: 0;
+
+  }
+
+}
+
+
+/* ==========================================
+   PERSONAJES
+========================================== */
+
+.character {
+
+  position: absolute;
+
+  z-index: 3;
+
+  text-align: center;
+
+}
+
+
+.character-face {
+
+  font-size: 95px;
+
+  filter:
+    drop-shadow(
+      0 10px 15px rgba(0, 0, 0, 0.35)
+    );
+
+}
+
+
+.character-name {
+
+  margin-top: 5px;
+
+  color: rgba(255, 248, 231, 0.75);
+
+  font-family: 'Cormorant Garamond', serif;
+
+  font-size: 20px;
+
+}
+
+
+/* BRILLO DE PERSONAJES */
+
+.character-glow {
+
+  position: absolute;
+
+  top: -20px;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  color: #f8d77c;
+
+  font-size: 25px;
+
+  animation: characterGlow 2s infinite ease-in-out;
+
+}
+
+
+@keyframes characterGlow {
+
+  0%,
+  100% {
+
+    opacity: 0.2;
+
+    transform:
+      translateX(-50%)
+      scale(0.7);
+
+  }
+
+  50% {
+
+    opacity: 1;
+
+    transform:
+      translateX(-50%)
+      scale(1.2);
+
+  }
+
+}
+
+
+/* RAPUNZEL */
+
+.rapunzel {
+
+  left: 7%;
+
+  bottom: 15%;
+
+  animation: rapunzelFloat 3s ease-in-out infinite;
+
+}
+
+
+@keyframes rapunzelFloat {
+
+  0%,
+  100% {
+
+    transform:
+      translateY(0)
+      rotate(-2deg);
+
+  }
+
+  50% {
+
+    transform:
+      translateY(-18px)
+      rotate(2deg);
+
+  }
+
+}
+
+
+/* FLYNN */
+
+.flynn {
+
+  right: 7%;
+
+  bottom: 15%;
+
+  animation: flynnFloat 3.2s ease-in-out infinite;
+
+}
+
+
+@keyframes flynnFloat {
+
+  0%,
+  100% {
+
+    transform:
+      translateY(0)
+      rotate(2deg);
+
+  }
+
+  50% {
+
+    transform:
+      translateY(-15px)
+      rotate(-2deg);
+
+  }
+
+}
+
+
+/* ==========================================
+   TORRE
+========================================== */
+
+.tower {
+
+  position: absolute;
+
+  left: 50%;
+
+  bottom: -80px;
+
+  transform: translateX(-50%);
+
+  width: 100px;
+
+  height: 230px;
+
+  border-radius: 50px 50px 10px 10px;
+
+  background:
+
+    linear-gradient(
+      90deg,
+      #321750,
+      #63378b,
+      #321750
+    );
+
+  opacity: 0.35;
+
+  z-index: 0;
+
+}
+
+
+.tower-top {
+
+  position: absolute;
+
+  top: -40px;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  color: #f4ce70;
+
+  font-size: 55px;
+
+}
+
+
+.tower-window {
+
+  position: absolute;
+
+  top: 70px;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  font-size: 25px;
+
+  animation: windowGlow 2s infinite ease-in-out;
+
+}
+
+
+@keyframes windowGlow {
+
+  0%,
+  100% {
+
+    opacity: 0.3;
+
+  }
+
+  50% {
+
+    opacity: 1;
+
+  }
+
+}
+
+
+/* ==========================================
+   TARJETA DE PROCESAMIENTO
+========================================== */
+
+.processing-card {
+
+  width: min(560px, 85%);
+
+  padding: 50px 40px;
+
+  text-align: center;
+
+  background: rgba(255, 255, 255, 0.09);
+
+  border: 1px solid rgba(244, 206, 112, 0.4);
+
+  border-radius: 30px;
+
+  backdrop-filter: blur(20px);
+
+  -webkit-backdrop-filter: blur(20px);
+
+  box-shadow:
+
+    0 30px 80px rgba(0, 0, 0, 0.5),
+
+    0 0 40px rgba(244, 206, 112, 0.08),
+
+    inset 0 0 50px rgba(255, 220, 150, 0.04);
+
+  position: relative;
+
+  z-index: 5;
+
+  animation: processingAppear 1s ease;
+
+}
+
+
+@keyframes processingAppear {
+
+  from {
+
+    opacity: 0;
+
+    transform: scale(0.85);
+
+  }
+
+  to {
+
+    opacity: 1;
+
+    transform: scale(1);
+
+  }
+
+}
+
+
+/* ==========================================
+   SOL
+========================================== */
+
+.processing-sun {
+
+  color: #f4ce70;
+
+  font-size: 55px;
+
+  margin-bottom: 5px;
+
+  text-shadow:
+
+    0 0 15px rgba(255, 215, 120, 0.8),
+
+    0 0 30px rgba(255, 215, 120, 0.5);
+
+  animation: sunSpin 6s linear infinite;
+
+}
+
+
+@keyframes sunSpin {
+
+  from {
+
+    transform: rotate(0deg);
+
+  }
+
+  to {
+
+    transform: rotate(360deg);
+
+  }
+
+}
+
+
+/* ==========================================
+   TEXTO DE CARGA
+========================================== */
+
+.processing-card h1 {
+
+  font-family: 'Cormorant Garamond', serif;
+
+  font-size: 52px;
+
+  font-weight: 600;
+
+  color: #fff8e7;
+
+}
+
+
+.processing-card p {
+
+  font-family: 'Cormorant Garamond', serif;
+
+  font-size: 24px;
+
+  color: #fff8e7;
+
+  margin-top: 12px;
+
+}
+
+
+.processing-message {
+
+  font-size: 20px !important;
+
+  color: rgba(255, 248, 231, 0.65) !important;
+
+}
+
+
+/* ==========================================
+   LOADER
+========================================== */
+
+.loader {
+
+  width: 90px;
+
+  height: 90px;
+
+  margin: 30px auto 20px;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  border-radius: 50%;
+
+  border: 2px solid rgba(244, 206, 112, 0.15);
+
+  border-top-color: #f4ce70;
+
+  border-right-color: rgba(244, 206, 112, 0.5);
+
+  animation: loaderRotate 1.4s linear infinite;
+
+}
+
+
+.loader-star {
+
+  color: #f4ce70;
+
+  font-size: 30px;
+
+  animation: loaderStarPulse 1s ease-in-out infinite alternate;
+
+  text-shadow:
+
+    0 0 15px rgba(244, 206, 112, 0.8);
+
+}
+
+
+@keyframes loaderRotate {
+
+  from {
+
+    transform: rotate(0deg);
+
+  }
+
+  to {
+
+    transform: rotate(360deg);
+
+  }
+
+}
+
+
+@keyframes loaderStarPulse {
+
+  from {
+
+    transform: scale(0.7);
+
+    opacity: 0.5;
+
+  }
+
+  to {
+
+    transform: scale(1.2);
+
+    opacity: 1;
+
+  }
+
+}
+
+
+/* ==========================================
+   ESTRELLAS INFERIORES
+========================================== */
+
+.processing-dots {
+
+  display: flex;
+
+  justify-content: center;
+
+  gap: 15px;
+
+  color: #f4ce70;
+
+}
+
+
+.processing-dots span {
+
+  animation: dotPulse 1.5s infinite;
+
+}
+
+
+.processing-dots span:nth-child(2) {
+
+  animation-delay: 0.3s;
+
+}
+
+
+.processing-dots span:nth-child(3) {
+
+  animation-delay: 0.6s;
+
+}
+
+
+@keyframes dotPulse {
+
+  0%,
+  100% {
+
+    opacity: 0.2;
+
+    transform: translateY(0);
+
+  }
+
+  50% {
+
+    opacity: 1;
+
+    transform: translateY(-6px);
+
+  }
+
+}
+
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 700px) {
+
+  .login-card {
+
+    padding: 40px 20px;
+
+  }
+
+
+  .photo-gallery {
+
+    gap: 8px;
+
+  }
+
+
+  .photo {
+
+    width: 31%;
+
+  }
+
+
+  .processing-card {
+
+    width: 90%;
+
+    padding: 45px 25px;
+
+  }
+
+
+  .processing-card h1 {
+
+    font-size: 42px;
+
+  }
+
+
+  .processing-card p {
+
+    font-size: 21px;
+
+  }
+
+
+  .character-face {
+
+    font-size: 65px;
+
+  }
+
+
+  .character-name {
+
+    font-size: 16px;
+
+  }
+
+
+  .rapunzel {
+
+    left: 2%;
+
+    bottom: 5%;
+
+  }
+
+
+  .flynn {
+
+    right: 2%;
+
+    bottom: 5%;
+
+  }
+
+
+  .tower {
+
+    opacity: 0.2;
+
+  }
+
+}
