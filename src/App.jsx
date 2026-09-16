@@ -1,6 +1,9 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import './App.css'
+import amor1 from '../screens/amor1.png'
+import amor2 from '../screens/amor2.png'
+import amor3 from '../screens/amor3.png'
 
 function App() {
   const [codigo, setCodigo] = useState('')
@@ -210,7 +213,7 @@ function App() {
           <div className="photo photo-left">
 
             <img
-              src="/screens/amor3.png"
+              src={amor3}
               alt="Nuestro recuerdo"
             />
 
@@ -220,7 +223,7 @@ function App() {
           <div className="photo photo-center">
 
             <img
-              src="/screens/amor1.png"
+              src={amor1}
               alt="Nuestro recuerdo"
             />
 
@@ -230,7 +233,7 @@ function App() {
           <div className="photo photo-right">
 
             <img
-              src="/screens/amor.png"
+              src={amor2}
               alt="Nuestro recuerdo"
             />
 
