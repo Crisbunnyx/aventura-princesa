@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import './Terror.css'
+import './PrimeraPista.css'
+import tiempo from '../screens/tiempo.png'
 
 function Sorpresa() {
   const [codigo, setCodigo] = useState('')
@@ -178,7 +180,7 @@ function Sorpresa() {
         <div className="pista-photo">
 
           <img
-            src="/screens/tiempo.png"
+            src={tiempo}
             alt="Nuestra primera pista"
           />
 
