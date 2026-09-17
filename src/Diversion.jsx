@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import './Terror.css'
+import hielo from '../screens/hielo.png'
 
 function Diversion() {
   const [codigo, setCodigo] = useState('')
@@ -182,7 +183,7 @@ function Diversion() {
         <div className="pista-photo">
 
           <img
-            src="/screens/hielo.png"
+            src={hielo}
             alt="Nuestra primera pista"
           />
 

@@ -1,6 +1,10 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import './SegundaPista.css'
+import opcion1 from '../screens/opcion1.png'
+import opcion2 from '../screens/opcion2.png'
+import opcion3 from '../screens/opcion3.png'
+import amor5 from '../screens/amor5.png'
 
 function SegundaPista() {
   const [codigo, setCodigo] = useState('')
@@ -177,7 +181,7 @@ function SegundaPista() {
         <div className="pista-photo">
 
           <img
-            src="/screens/amor5.png"
+            src={amor5}
             alt="Nuestra primera cita"
           />
 
@@ -238,7 +242,7 @@ function SegundaPista() {
                 <div className="option-front">
 
                   <img
-                    src="/screens/opcion1.png"
+                    src={opcion1}
                     alt="Diversión, nieve y risas"
                   />
 
@@ -284,7 +288,7 @@ function SegundaPista() {
                 <div className="option-front">
 
                   <img
-                    src="/screens/opcion2.png"
+                    src={opcion2}
                     alt="Charla, terror y comida"
                   />
 
@@ -330,7 +334,7 @@ function SegundaPista() {
                 <div className="option-front">
 
                   <img
-                    src="/screens/opcion3.png"
+                    src={opcion3}
                     alt="Películas, amor y besitos"
                   />
 

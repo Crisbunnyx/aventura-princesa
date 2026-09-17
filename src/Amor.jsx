@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import './Terror.css'
+import pelis from '../screens/pelis.png'
 
 function Amor() {
   const [codigo, setCodigo] = useState('')
@@ -182,7 +183,7 @@ function Amor() {
         <div className="pista-photo">
 
           <img
-            src="/screens/pelis.png"
+            src={pelis}
             alt="Nuestra primera pista"
           />
 

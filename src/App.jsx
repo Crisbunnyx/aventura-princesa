@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import './App.css'
 import amor1 from '../screens/amor1.png'
-import amor2 from '../screens/amor2.png'
+import amor2 from '../screens/amor.png'
 import amor3 from '../screens/amor3.png'
 
 function App() {
