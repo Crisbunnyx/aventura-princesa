@@ -1325,3 +1325,670 @@ body {
     font-size: 17px;
   }
 }
+
+/* =====================================================
+   NUESTRA PROMESA - VENTANA
+   ===================================================== */
+
+.pdf-overlay {
+  position: fixed;
+  inset: 0;
+
+  z-index: 9999;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 20px;
+
+  box-sizing: border-box;
+
+  background: rgba(10, 4, 22, 0.90);
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  overflow: hidden;
+}
+
+
+/* =====================================================
+   MODAL
+   ===================================================== */
+
+.pdf-modal {
+  position: relative;
+
+  width: min(950px, 96vw);
+
+  height: min(94vh, 1000px);
+
+  display: flex;
+  flex-direction: column;
+
+  box-sizing: border-box;
+
+  padding: 30px 30px 25px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(55, 21, 88, 0.98),
+      rgba(25, 8, 45, 0.99)
+    );
+
+  border: 1px solid rgba(239, 197, 101, 0.55);
+
+  border-radius: 25px;
+
+  box-shadow:
+    0 0 60px rgba(0, 0, 0, 0.70),
+    0 0 35px rgba(225, 180, 75, 0.18);
+
+  overflow: hidden;
+}
+
+
+/* =====================================================
+   BOTÓN X
+   ===================================================== */
+
+.pdf-close {
+  position: absolute;
+
+  top: 14px;
+  right: 16px;
+
+  z-index: 50;
+
+  width: 45px;
+  height: 45px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 0;
+
+  border: none;
+  border-radius: 50%;
+
+  background: rgba(20, 7, 34, 0.75);
+
+  color: #f5d783;
+
+  font-size: 32px;
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+.pdf-close:hover {
+  transform: scale(1.08);
+
+  background: rgba(100, 50, 130, 0.8);
+}
+
+
+/* =====================================================
+   ENCABEZADO
+   ===================================================== */
+
+.pdf-header {
+  flex-shrink: 0;
+
+  width: 100%;
+
+  text-align: center;
+
+  box-sizing: border-box;
+
+  padding: 5px 55px 12px;
+}
+
+.pdf-header h2 {
+  margin: 5px 0 8px;
+
+  color: #f7d98a;
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: clamp(32px, 4vw, 48px);
+
+  line-height: 1.05;
+}
+
+
+/* =====================================================
+   CONTENEDOR DE LA IMAGEN
+   ===================================================== */
+
+.pdf-container {
+  flex: 1;
+
+  min-height: 0;
+
+  width: 100%;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: flex-start;
+
+  box-sizing: border-box;
+
+  padding: 10px 5px 20px;
+
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  -webkit-overflow-scrolling: touch;
+
+  scrollbar-width: thin;
+
+  scrollbar-color:
+    rgba(235, 190, 90, 0.7)
+    transparent;
+}
+
+
+/* =====================================================
+   IMAGEN
+   ===================================================== */
+
+.promesa-image {
+  display: block;
+
+  width: 100%;
+
+  max-width: 850px;
+
+  height: auto;
+
+  flex-shrink: 0;
+
+  margin: 0 auto;
+
+  border-radius: 8px;
+
+  box-shadow:
+    0 10px 35px rgba(0, 0, 0, 0.45);
+}
+
+
+/* =====================================================
+   BOTÓN CERRAR INFERIOR
+   ===================================================== */
+
+.pdf-modal > .date-modal-button {
+  flex-shrink: 0;
+
+  width: 100%;
+
+  margin-top: 5px;
+}
+
+
+/* =====================================================
+   CELULARES
+   ===================================================== */
+
+@media (max-width: 600px) {
+
+  /* ---------------------------------------------
+     FONDO
+     --------------------------------------------- */
+
+  .pdf-overlay {
+    padding: 0;
+
+    align-items: stretch;
+  }
+
+
+  /* ---------------------------------------------
+     MODAL PANTALLA COMPLETA
+     --------------------------------------------- */
+
+  .pdf-modal {
+    width: 100%;
+
+    height: 100dvh;
+
+    min-height: 100dvh;
+
+    padding:
+      12px
+      8px
+      12px;
+
+    border-radius: 0;
+
+    border: none;
+
+    box-shadow: none;
+  }
+
+
+  /* ---------------------------------------------
+     BOTÓN X
+     --------------------------------------------- */
+
+  .pdf-close {
+    top: 10px;
+    right: 10px;
+
+    width: 46px;
+    height: 46px;
+
+    font-size: 31px;
+
+    background:
+      rgba(20, 7, 34, 0.85);
+  }
+
+
+  /* ---------------------------------------------
+     ENCABEZADO
+     --------------------------------------------- */
+
+  .pdf-header {
+
+    padding:
+      0
+      45px
+      8px;
+
+  }
+
+  .pdf-header .date-sparkles {
+
+    font-size: 13px;
+
+    margin-bottom: 0;
+
+  }
+
+  .pdf-header .date-sun {
+
+    font-size: 25px;
+
+    margin: 0;
+
+  }
+
+  .pdf-header .date-small-title {
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+  }
+
+  .pdf-header h2 {
+
+    font-size: 30px;
+
+    margin:
+      2px
+      0
+      5px;
+
+  }
+
+  .pdf-header .date-divider {
+
+    margin:
+      4px
+      auto;
+
+  }
+
+
+  /* ---------------------------------------------
+     CONTENEDOR DE LA IMAGEN
+     --------------------------------------------- */
+
+  .pdf-container {
+
+    width: 100%;
+
+    padding:
+      5px
+      0
+      12px;
+
+    overflow-x: hidden;
+
+    overflow-y: auto;
+
+    -webkit-overflow-scrolling: touch;
+
+  }
+
+
+  /* ---------------------------------------------
+     IMAGEN GRANDE
+     --------------------------------------------- */
+
+  .promesa-image {
+
+    width: 100%;
+
+    max-width: none;
+
+    height: auto;
+
+    margin: 0;
+
+    border-radius: 5px;
+
+    box-shadow:
+      0 5px 20px
+      rgba(0, 0, 0, 0.40);
+
+  }
+
+
+  /* ---------------------------------------------
+     BOTÓN INFERIOR
+     --------------------------------------------- */
+
+  .pdf-modal > .date-modal-button {
+
+    width: 100%;
+
+    min-height: 50px;
+
+    margin:
+      5px
+      0
+      0;
+
+    flex-shrink: 0;
+
+    font-size: 16px;
+
+  }
+
+}
+
+
+/* =====================================================
+   TELÉFONOS MUY PEQUEÑOS
+   ===================================================== */
+
+@media (max-width: 380px) {
+
+  .pdf-modal {
+    padding:
+      8px
+      6px
+      10px;
+  }
+
+  .pdf-header {
+    padding:
+      0
+      40px
+      5px;
+  }
+
+  .pdf-header h2 {
+    font-size: 27px;
+  }
+
+  .pdf-close {
+    width: 42px;
+    height: 42px;
+  }
+
+}
+
+/* =====================================================
+   VENTANA DEL CÓDIGO SECRETO
+   ===================================================== */
+
+.code-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 20px;
+  box-sizing: border-box;
+
+  background: rgba(10, 4, 22, 0.88);
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.code-modal {
+  position: relative;
+
+  width: min(520px, 94vw);
+
+  padding: 42px 38px 35px;
+
+  box-sizing: border-box;
+
+  text-align: center;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(55, 21, 88, 0.98),
+      rgba(25, 8, 45, 0.99)
+    );
+
+  border: 1px solid rgba(239, 197, 101, 0.6);
+
+  border-radius: 25px;
+
+  box-shadow:
+    0 0 60px rgba(0, 0, 0, 0.7),
+    0 0 35px rgba(225, 180, 75, 0.2);
+
+  animation: codeModalAppear 0.35s ease;
+}
+
+@keyframes codeModalAppear {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* TITULO */
+
+.code-modal h2 {
+  margin: 8px 0 15px;
+
+  color: #f7d98a;
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: clamp(34px, 5vw, 46px);
+
+  line-height: 1.05;
+}
+
+/* TEXTO */
+
+.code-message {
+  margin: 0 auto 25px;
+
+  color: rgba(255, 255, 255, 0.88);
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 15px;
+
+  line-height: 1.7;
+}
+
+/* INPUT */
+
+.code-input {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 16px 18px;
+
+  margin-bottom: 12px;
+
+  border: 1px solid rgba(239, 197, 101, 0.55);
+
+  border-radius: 12px;
+
+  outline: none;
+
+  background: rgba(15, 5, 30, 0.75);
+
+  color: #f7d98a;
+
+  text-align: center;
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 18px;
+
+  letter-spacing: 2px;
+
+  transition:
+    border 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.code-input::placeholder {
+  color: rgba(255, 255, 255, 0.45);
+
+  letter-spacing: 0;
+}
+
+.code-input:focus {
+  border-color: #f5d783;
+
+  background: rgba(20, 7, 38, 0.9);
+
+  box-shadow:
+    0 0 18px rgba(239, 197, 101, 0.2);
+}
+
+/* ERROR */
+
+.code-error {
+  margin: 5px 0 15px;
+
+  color: #ffb6c1;
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 13px;
+
+  animation: errorShake 0.3s ease;
+}
+
+@keyframes errorShake {
+
+  0% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(-5px);
+  }
+
+  50% {
+    transform: translateX(5px);
+  }
+
+  75% {
+    transform: translateX(-5px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+
+}
+
+/* BOTONES */
+
+.code-modal .date-modal-button {
+  width: 100%;
+
+  margin-top: 8px;
+}
+
+/* =====================================================
+   CELULAR
+   ===================================================== */
+
+@media (max-width: 600px) {
+
+  .code-overlay {
+    padding: 15px;
+  }
+
+  .code-modal {
+    width: 100%;
+
+    padding: 35px 22px 28px;
+
+    border-radius: 22px;
+  }
+
+  .code-modal h2 {
+    font-size: 34px;
+  }
+
+  .code-message {
+    font-size: 14px;
+
+    line-height: 1.6;
+  }
+
+  .code-input {
+    padding: 17px 15px;
+
+    font-size: 17px;
+  }
+
+  .code-modal .date-modal-button {
+    min-height: 50px;
+
+    font-size: 15px;
+  }
+
+}
+
+/* CELULARES PEQUEÑOS */
+
+@media (max-width: 380px) {
+
+  .code-modal {
+    padding: 28px 18px 22px;
+  }
+
+  .code-modal h2 {
+    font-size: 30px;
+  }
+
+}

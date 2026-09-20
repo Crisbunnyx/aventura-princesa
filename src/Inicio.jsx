@@ -8,7 +8,7 @@ function Inicio() {
   const [procesando, setProcesando] = useState(false)
   const [mostrarFecha, setMostrarFecha] = useState(false)
 
-  const aventuraActiva = false
+  const aventuraActiva = true
   const comenzarAventura = () => {
     if (!aventuraActiva || procesando) return
 
@@ -235,7 +235,7 @@ function Inicio() {
             </p>
 
             <div className="special-date">
-              <span>2x</span>
+              <span>21</span>
               <div>
                 <strong>SEPTIEMBRE</strong>
                 <small>2026</small>

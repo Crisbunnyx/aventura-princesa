@@ -180,6 +180,18 @@ function PrimeraPista() {
           <span>✦</span>
         </div>
 
+        <div className="pista-text">
+
+          <p>
+            Quien diría que todo comenzaría con una simple nota de instagram diciendo que mi mujer quería ir a ver Evil Dead al cine, y como uno necesita más señales que esas jeje tuvo que esperar a preguntarle por chat a ver si la señorita tenia algo de interés en este vagabundo...
+          </p>
+
+          <p className="carriage-message">
+            TE AMO
+          </p>
+
+        </div>
+
         <div className="pista-photo">
 
           <img

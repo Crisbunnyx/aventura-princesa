@@ -31,7 +31,7 @@ function SegundaPista() {
       }, 5000)
     } 
 
-    else if (codigo.trim().toLowerCase() === 'potito') {
+    else if (codigo.trim().toLowerCase() === 'sabes') {
       setProcesando(true)
 
       setTimeout(() => {
@@ -263,7 +263,7 @@ function SegundaPista() {
                   </h3>
 
                   <p>
-                    El código para este plan es: <b>Lo que más me gusta de tí</b>
+                    El código para este plan es: <b>xxxx</b>
                   </p>
 
                 </div>
@@ -309,7 +309,7 @@ function SegundaPista() {
                   </h3>
 
                   <p>
-                    El código para este plan es: <b>Mi flor favorita</b>
+                    El código para este plan es: <b>xxxxxx</b>
                   </p>
 
                 </div>
@@ -355,7 +355,7 @@ function SegundaPista() {
                   </h3>
 
                   <p>
-                    El código para este plan es: <b>El nombre de tu oso grande</b>
+                    El código para este plan es: <b>xxxxx</b>
                   </p>
 
                 </div>

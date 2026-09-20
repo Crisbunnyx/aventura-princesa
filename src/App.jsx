@@ -254,7 +254,7 @@ function App() {
         <div className="access">
 
           <h2>
-            Ingrese su código de acceso
+            Ingrese su código de acceso de 8 letras
           </h2>
 
           <p className="access-subtitle">
